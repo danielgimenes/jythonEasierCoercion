@@ -3,13 +3,23 @@ jythonForcedCoersion
 
 Use python libraries in Java WITHOUT need of python classes to implement Java interfaces (normal Jython method).
 
+jythonForcedCoersion library allows you to create and/or convert Python objects of a library to Java objects and assign them to a Java reference variable of a type (interface) that you create. It uses Jython, and the difference from 'pure' Jython is that jythonForcedCoersion doesn't need that you modify Python library classes so they implement the Java interface. There are two 'modes' of use, Easy and AuxClass, described above.
+
+### Easy mode
+
+If all Python object data is accessible through methods (gets and sets; accessors and mutators) this is the mode. Create a Java interface with the methods you're going to use, and let jythonForcedCoersion do it's work.
+
+### AuxClass mode
+
+This mode is specific for using when some data in Python class is not provided through methods (in other works, the class provides public attributes and no gets or sets). 
+
 ## Status
 
 under development (not production ready)
 
 ## Usage
 
-To use jythonForceCoersion get a `JythonObjectManager` object by calling `JythonObjectManager.getInstance()` and use the methods below for creating and converting objects.
+To use jythonForcedCoersion get a `JythonObjectManager` object by calling `JythonObjectManager.getInstance()` and use the methods below for creating and converting objects.
 
 ```java
 	Object createObject(Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName) throws JythonInstantiationException, JythonDynamicCoersionException
@@ -29,7 +39,8 @@ To use jythonForceCoersion get a `JythonObjectManager` object by calling `Jython
 
 ## Installation
 
-Add the jythonForceCoersion JAR file to your build path, and make sure it's exported with your application bundle (JAR, WAR, etc).
+1. Add jythonForceCoersion and Jython Standalone JAR files to your build path, and make sure they're exported with your application bundle (JAR, WAR, etc). 
+2. The python library and auxiliary python classes (if using AuxClass mode) must be added to the Lib/ directory of the Jython Standalone JAR to be available during runtime.
 
 ## How it works
 
