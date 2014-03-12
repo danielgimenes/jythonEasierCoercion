@@ -1,13 +1,13 @@
-jythonForcedCoersion
+jythonEasierCoercion
 =====================
 
 Use python libraries in Java WITHOUT need of python classes to implement Java interfaces (normal Jython method).
 
-jythonForcedCoersion library allows you to create and/or convert Python objects of a library to Java objects and assign them to a Java reference variable of a type (interface) that you create. It uses Jython, and the difference from 'pure' Jython is that jythonForcedCoersion doesn't need that you modify Python library classes so they implement the Java interface. There are two 'modes' of use, Simple and AuxClass, described above.
+jythonEasierCoercion library allows you to create and/or convert Python objects of a library to Java objects and assign them to a Java reference variable of a type (interface) that you create. It uses Jython, and the difference from 'pure' Jython is that jythonEasierCoercion doesn't need that you modify Python library classes so they implement the Java interface. There are two 'modes' of use, Simple and AuxClass, described above.
 
 ### Simple mode
 
-If all Python object data is accessible through methods (gets and sets; accessors and mutators) this is the mode. Create a Java interface with the methods you're going to use, and let jythonForcedCoersion do it's work.
+If all Python object data is accessible through methods (gets and sets; accessors and mutators) this is the mode. Create a Java interface with the methods you're going to use, and let jythonEasierCoercion do it's work.
 
 ### AuxClass mode
 
@@ -15,7 +15,7 @@ This mode is specific for using when some data in Python class is not provided t
 
 ## Usage
 
-To use jythonForcedCoersion get a `JythonObjectManager` object by calling `JythonObjectManager.getInstance()` and use the methods below for creating and converting objects.
+To use jythonEasierCoercion get a `JythonObjectManager` object by calling `JythonObjectManager.getInstance()` and use the methods below for creating and converting objects.
 
 ```java
 /**
