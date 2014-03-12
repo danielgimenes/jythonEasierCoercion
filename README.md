@@ -9,12 +9,17 @@ How to use: call JythonObjectManager.getInstance() to get the JythonObjectManage
 
 ```java
 	Object createObject(Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName) throws JythonInstantiationException, JythonDynamicCoersionException
+```
 
 ```java
 	Object createObjectUsingAuxClass(Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName, String auxPythonClassPackage,	String auxPythonClassName) throws JythonInstantiationException, JythonDynamicCoersionException
+```
 
 ```java
 	Object convertPyObject(PyObject objectToConvert, Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName) throws JythonDynamicCoersionException
+```
 
 ```java
 	Object convertPyObjectUsingAuxPythonClass(PyObject objectToConvert, Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName, String auxPythonClassPackage, String auxPythonClassName) throws JythonDynamicCoersionException
+```
+
