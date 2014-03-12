@@ -3,11 +3,11 @@ jythonForcedCoersion
 
 Use python libraries in Java WITHOUT need of python classes to implement Java interfaces (normal Jython method).
 
-# Status
+## Status
 
 in development (not production ready)
 
-# Usage
+## Usage
 
 To use jythonForceCoersion get a `JythonObjectManager` object by calling `JythonObjectManager.getInstance()` and use the methods below for creating and converting objects.
 
@@ -27,15 +27,15 @@ To use jythonForceCoersion get a `JythonObjectManager` object by calling `Jython
 	Object convertPyObjectUsingAuxPythonClass(PyObject objectToConvert, Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName, String auxPythonClassPackage, String auxPythonClassName) throws JythonDynamicCoersionException
 ```
 
-# Installation
+## Installation
 
 Add the jythonForceCoersion JAR file to your build path, and make sure it's exported with your application bundle (JAR, WAR, etc).
 
-# How it works
+## How it works
 
 // TO DO
 
-# License
+## License
 
 The MIT License (MIT)
 
