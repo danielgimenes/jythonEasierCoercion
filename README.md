@@ -5,7 +5,7 @@ Use python libraries in Java WITHOUT need of python classes to implement Java in
 
 ## Status
 
-in development (not production ready)
+under development (not production ready)
 
 ## Usage
 
