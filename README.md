@@ -11,7 +11,7 @@ If all Python object data is accessible through methods (gets and sets; accessor
 
 ### AuxClass mode
 
-This mode is specific for using when some data in Python class is not provided through methods (in other works, the class provides public attributes and no gets or sets). 
+This mode is specific for using when some data in Python class is not provided through methods (in other words, the class provides public attributes and no gets or sets). 
 
 ## Usage
 
