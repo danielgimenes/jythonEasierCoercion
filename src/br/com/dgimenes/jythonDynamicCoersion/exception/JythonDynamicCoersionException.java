@@ -21,8 +21,8 @@ package br.com.dgimenes.jythonDynamicCoersion.exception;
 /**
  * Jython problem while trying to coerse Python object to Java
  * 
- * @author daniel
- * @version 0.8
+ * @author danielgimenes
+ * @version 1.0
  *
  */
 public class JythonDynamicCoersionException extends Exception {

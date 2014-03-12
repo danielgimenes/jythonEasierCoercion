@@ -21,8 +21,8 @@ package br.com.dgimenes.jythonDynamicCoersion.exception;
 /**
  * Could not create Python object of the specified Python class
  * 
- * @author daniel
- * @version 0.8
+ * @author danielgimenes
+ * @version 1.0
  *
  */
 public class JythonInstantiationException extends Exception {

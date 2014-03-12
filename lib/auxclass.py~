@@ -1,0 +1,3 @@
+class SomePythonClassEx(SomePythonClass):
+	def getResult(self):
+		return self.result

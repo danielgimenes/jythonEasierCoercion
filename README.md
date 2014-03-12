@@ -3,9 +3,9 @@ jythonForcedCoersion
 
 Use python libraries in Java WITHOUT need of python classes to implement Java interfaces (normal Jython method).
 
-jythonForcedCoersion library allows you to create and/or convert Python objects of a library to Java objects and assign them to a Java reference variable of a type (interface) that you create. It uses Jython, and the difference from 'pure' Jython is that jythonForcedCoersion doesn't need that you modify Python library classes so they implement the Java interface. There are two 'modes' of use, Easy and AuxClass, described above.
+jythonForcedCoersion library allows you to create and/or convert Python objects of a library to Java objects and assign them to a Java reference variable of a type (interface) that you create. It uses Jython, and the difference from 'pure' Jython is that jythonForcedCoersion doesn't need that you modify Python library classes so they implement the Java interface. There are two 'modes' of use, Simple and AuxClass, described above.
 
-### Easy mode
+### Simple mode
 
 If all Python object data is accessible through methods (gets and sets; accessors and mutators) this is the mode. Create a Java interface with the methods you're going to use, and let jythonForcedCoersion do it's work.
 
@@ -13,28 +13,97 @@ If all Python object data is accessible through methods (gets and sets; accessor
 
 This mode is specific for using when some data in Python class is not provided through methods (in other works, the class provides public attributes and no gets or sets). 
 
-## Status
-
-under development (not production ready)
-
 ## Usage
 
 To use jythonForcedCoersion get a `JythonObjectManager` object by calling `JythonObjectManager.getInstance()` and use the methods below for creating and converting objects.
 
 ```java
-	Object createObject(Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName) throws JythonInstantiationException, JythonDynamicCoersionException
+/**
+ * Creates Python object and apply coersion to return an object of type
+ * specified in returnInterfaceType parameter.
+ * 
+ * @param returnInterfaceType
+ *            java type to coerse Python object to
+ * @param pythonClassPackage
+ *            package name of Python class
+ * @param pythonClassName
+ *            Python class name
+ * @return object that is of type specified in returnInterfaceType parameter
+ * @throws JythonInstantiationException
+ * @throws JythonDynamicCoersionException
+ */
+public Object createObject(Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName) throws JythonInstantiationException, JythonDynamicCoersionException
 ```
 
 ```java
-	Object createObjectUsingAuxClass(Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName, String auxPythonClassPackage,	String auxPythonClassName) throws JythonInstantiationException, JythonDynamicCoersionException
+/**
+ * 
+ * Converts (coerse) Python object to an object of type specified in
+ * returnInterfaceType parameter.
+ * 
+ * @param objectToConvert
+ *            object reprenting Python Object to coerse from
+ * @param returnInterfaceType
+ *            java type to coerse Python object to
+ * @param pythonClassPackage
+ *            package name of Python class
+ * @param pythonClassName
+ *            Python class name
+ * @return object that is of type specified in returnInterfaceType parameter
+ * @throws JythonDynamicCoersionException
+ */
+public Object convertPyObject(PyObject objectToConvert, Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName) throws JythonDynamicCoersionException
 ```
 
 ```java
-	Object convertPyObject(PyObject objectToConvert, Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName) throws JythonDynamicCoersionException
+/**
+ * Creates Python object and apply coersion to return an object of type
+ * specified in returnInterfaceType parameter. During the conversion, the
+ * Python class used for coersion can be specified (Auxiliary Class). That
+ * class must subclass the original object's Python class, and can be used
+ * for exposing attributes.
+ * 
+ * @param returnInterfaceType
+ *            java type to coerse Python object to
+ * @param pythonClassPackage
+ *            package name of Python class
+ * @param pythonClassName
+ *            Python class name
+ * @param auxPythonClassPackage
+ *            package name of auxiliary Python class
+ * @param auxPythonClassName
+ *            auxiliary Python class name
+ * @return object that is of type specified in returnInterfaceType parameter
+ * @throws JythonInstantiationException
+ * @throws JythonDynamicCoersionException
+ */
+public Object createObjectUsingAuxClass(Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName, String auxPythonClassPackage, String auxPythonClassName) throws JythonInstantiationException, JythonDynamicCoersionException
 ```
 
 ```java
-	Object convertPyObjectUsingAuxPythonClass(PyObject objectToConvert, Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName, String auxPythonClassPackage, String auxPythonClassName) throws JythonDynamicCoersionException
+/**
+ * Converts (coerse) Python object to an object of type specified in
+ * returnInterfaceType parameter. During the conversion, the Python class
+ * used for coersion can be specified (Auxiliary Class). That class must
+ * subclass the original object's Python class, and can be used for exposing
+ * attributes.
+ * 
+ * @param objectToConvert
+ *            object reprenting Python Object to coerse from
+ * @param returnInterfaceType
+ *            java type to coerse Python object to
+ * @param pythonClassPackage
+ *            package name of Python class
+ * @param pythonClassName
+ *            Python class name
+ * @param auxPythonClassPackage
+ *            package name of auxiliary Python class
+ * @param auxPythonClassName
+ *            auxiliary Python class name
+ * @return object that is of type specified in returnInterfaceType parameter
+ * @throws JythonDynamicCoersionException
+ */
+public Object convertPyObjectUsingAuxClass(PyObject objectToConvert, Class<?> returnInterfaceType, String pythonClassPackage, String pythonClassName, String auxPythonClassPackage, String auxPythonClassName) throws JythonDynamicCoersionException
 ```
 
 ## Installation
@@ -42,9 +111,9 @@ To use jythonForcedCoersion get a `JythonObjectManager` object by calling `Jytho
 1. Add jythonForceCoersion and Jython Standalone JAR files to your build path, and make sure they're exported with your application bundle (JAR, WAR, etc). 
 2. The python library and auxiliary python classes (if using AuxClass mode) must be added to the Lib/ directory of the Jython Standalone JAR to be available during runtime.
 
-## How it works
+## Status
 
-// TO DO
+Released
 
 ## License
 
