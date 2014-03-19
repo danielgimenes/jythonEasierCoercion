@@ -19,13 +19,13 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE.
  */
-package br.com.dgimenes.jythonDynamicCoersion;
+package br.com.dgimenes.jythonEasierCoercion;
 
 import org.python.core.PyObject;
 import org.python.util.PythonInterpreter;
 
-import br.com.dgimenes.jythonDynamicCoersion.exception.JythonDynamicCoersionException;
-import br.com.dgimenes.jythonDynamicCoersion.exception.JythonInstantiationException;
+import br.com.dgimenes.jythonEasierCoercion.exception.JythonDynamicCoersionException;
+import br.com.dgimenes.jythonEasierCoercion.exception.JythonInstantiationException;
 
 /**
  * Provides methods for creating and/or converting Python objects to Java

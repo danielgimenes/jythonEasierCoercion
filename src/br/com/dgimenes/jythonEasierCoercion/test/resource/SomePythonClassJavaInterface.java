@@ -19,7 +19,7 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE.
  */
-package br.com.dgimenes.jythonDynamicCoersion.test.resource;
+package br.com.dgimenes.jythonEasierCoercion.test.resource;
 
 public interface SomePythonClassJavaInterface {
 	public abstract boolean process();

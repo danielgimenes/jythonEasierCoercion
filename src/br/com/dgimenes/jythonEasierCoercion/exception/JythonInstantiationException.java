@@ -19,7 +19,7 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE.
  */
-package br.com.dgimenes.jythonDynamicCoersion.exception;
+package br.com.dgimenes.jythonEasierCoercion.exception;
 
 /**
  * Could not create Python object of the specified Python class

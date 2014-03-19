@@ -19,7 +19,7 @@
  * OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE.
  */
-package br.com.dgimenes.jythonDynamicCoersion.test;
+package br.com.dgimenes.jythonEasierCoercion.test;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -31,11 +31,11 @@ import org.junit.runners.JUnit4;
 import org.python.core.PyObject;
 import org.python.util.PythonInterpreter;
 
-import br.com.dgimenes.jythonDynamicCoersion.JythonObjectManager;
-import br.com.dgimenes.jythonDynamicCoersion.exception.JythonDynamicCoersionException;
-import br.com.dgimenes.jythonDynamicCoersion.exception.JythonInstantiationException;
-import br.com.dgimenes.jythonDynamicCoersion.test.resource.SomeAuxPythonClassJavaInterface;
-import br.com.dgimenes.jythonDynamicCoersion.test.resource.SomePythonClassJavaInterface;
+import br.com.dgimenes.jythonEasierCoercion.JythonObjectManager;
+import br.com.dgimenes.jythonEasierCoercion.exception.JythonDynamicCoersionException;
+import br.com.dgimenes.jythonEasierCoercion.exception.JythonInstantiationException;
+import br.com.dgimenes.jythonEasierCoercion.test.resource.SomeAuxPythonClassJavaInterface;
+import br.com.dgimenes.jythonEasierCoercion.test.resource.SomePythonClassJavaInterface;
 
 @RunWith(JUnit4.class)
 public class JythonObjectManagerTest {
